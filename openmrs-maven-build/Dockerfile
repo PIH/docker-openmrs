@@ -12,4 +12,8 @@ RUN apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa
 RUN apt-get update
 RUN apt-get install -y firefox
 
+# Selenium tests in some modules require there to be a valid file configured for OPENSSL_CONF
+RUN touch /root/openssl.conf
+ENV OPENSSL_CONF=/root/openssl.conf
+
 CMD ["mvn"]
