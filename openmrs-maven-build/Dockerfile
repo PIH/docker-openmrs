@@ -13,7 +13,7 @@ RUN apt-get update
 RUN apt-get install -y firefox
 
 # library required by Puppeeter, which is used to run some Karma tests using ChromeHeadless
-RUN apt-get install libnss3-dev libgdk-pixbuf2.0-dev libgtk-3-dev libxss-dev
+RUN apt-get install -y libnss3-dev libgdk-pixbuf2.0-dev libgtk-3-dev libxss-dev
 
 # Selenium tests in some modules require there to be a valid file configured for OPENSSL_CONF
 RUN touch /root/openssl.conf
