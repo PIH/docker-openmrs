@@ -8,7 +8,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 # library required by Puppeeter, which is used to run some Karma tests using ChromeHeadless
 # Selenium tests in some modules require there to be a valid file configured for OPENSSL_CONF
 RUN apt-get update \
-&& apt-get install -y firefox-esr docker gnupg \
+&& apt-get install -y firefox-esr docker gnupg git \
     fonts-liberation gconf-service libappindicator1 libasound2 libatk1.0-0 \
     libcairo2 libcups2 libfontconfig1 libgbm-dev libgdk-pixbuf2.0-0 libgtk-3-0 libicu-dev libjpeg-dev  \
     libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libpng-dev libx11-6 libx11-xcb1 libxcb1  \
