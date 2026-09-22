@@ -1,6 +1,11 @@
 openmrs-maven-build
 =======================
 
+**DEPRECATED:** this image is no longer rebuilt or published. Its base image (`maven:3-jdk-8-slim`, Debian 11) is past end of
+life and can no longer install security updates, so it fails to build. The last published image (`latest`/`main`,
+2025-02-05) remains available on Docker Hub, but will not receive any further updates, including security fixes. The
+Dockerfile is kept here for reference only.
+
 ### Development
 
 To build this image locally:
@@ -15,4 +20,4 @@ To use this image locally to build a particular project:
 
 ### CI
 
-This image is built by github actions automatically upon each commit, and published to partnersinhealth/openmrs-maven-build in DockerHub.
+This image was previously built by github actions automatically upon each commit, and published to partnersinhealth/openmrs-maven-build in DockerHub.
