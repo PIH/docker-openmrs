@@ -1,14 +1,14 @@
 # For every commit or tag that is pushed, build an image from it and push this to docker hub
 
-name: Deploy to partnersinhealth/openmrs-maven-build
+name: Deploy to partnersinhealth/p7zip
 
 on:
   push:
     branches:
       - 'main'
     paths:
-      - 'openmrs-maven-build/**'
-      - '.github/workflows/deploy-openmrs-maven-build.yml'
+      - 'p7zip/**'
+      - '.github/workflows/deploy-p7zip.yml'
   create:
 
 jobs:
@@ -20,8 +20,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: PIH/openmrs-contrib-distro-tools/.github/actions/build-and-push-docker@main
         with:
-          image_name: partnersinhealth/openmrs-maven-build
-          context: ./openmrs-maven-build
+          image_name: partnersinhealth/p7zip
+          context: ./p7zip
           version: ${{ github.ref_name }}
           dockerhub_password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          platforms: linux/amd64
